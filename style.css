@@ -1,7 +1,8 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 body {
-    background-color: rgb(20, 61, 75);;
+    background-color: rgb(20, 61, 75);
     background-image: url(./img/mandala.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -49,29 +50,54 @@ h1 {
     transition: border-color 0.15s;
 }
 
-.button__add {
+.button__add, .button__show, .button__clear {
     background-color: rgb(155, 203, 218);
     color: white;
     font-weight: 600;
+}
+
+.button__show, .button__clear {
+    border: solid 1px rgb(25, 215, 240);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0.2rem;
+    outline: none;
+    padding: 0.375rem 0.75rem;
+    transition: border-color 0.15s;
 }
 
 .input {
     flex-direction: row;
 }
 
-ul li {
+li {
     background-color: rgb(155, 203, 218);
     border: solid 1px rgb(25, 215, 240);
     border-radius: 4px;
     box-sizing: border-box;
     color: white;
-    font-size: 1.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.2rem;
     list-style-type: none;
     margin: 0.6rem 0;
     padding: 0.5rem;
+    position: relative;
+    text-align: left;
 }
 
-ul {
+.fade-in {
+    animation: fadeIn ease-in 1s;
+};
+
+@keyframes fadeIn {
+    0% {opacity : 0};
+    100% {opacity : 1}
+}
+    
+.ul {
     margin: 0;
     padding: 0;
 }
@@ -88,7 +114,54 @@ ul {
     padding: 0.23rem;
 } 
 
+h2, .chill {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem;
+    padding: 0.23rem;
+}
+
 .calendar {
     padding: 1rem 0 2rem;
 }
 
+input[type=checkbox] {
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+}
+
+.delete {
+    color: white;
+    display: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-right: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 0.35rem;
+}
+
+.delete:hover {
+    color: rgb(33, 96, 117);
+    cursor: pointer;
+}
+
+.delete {
+    background-color: rgb(155, 203, 218);
+    border: 1px transparent;
+    outline: none;
+}
+
+li:hover .delete {
+    display: block;
+}
+
+.button__show:hover, .button__clear:hover, .button__add:hover {
+    background-color: rgb(33, 96, 117);
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}

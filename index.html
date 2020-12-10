@@ -19,25 +19,37 @@
                 <div class="date"></div>
                 </div>
 
-                <div class="input">
-                <input class="input__content" type="text" placeholder="Take the garbage out">
-                <button class="button__add">+</button>
-                </div>
+                <form class="input">
+                <input class="input__content" type="text" value="" placeholder="Take the garbage out">
+                <button class="button__add" type="submit">+</button>
+                </form>
 
                 <div class="list">
-                <ul id="dailyList">
-                    <li>Hit the gym</li>
-                    <li class="checked">Buy vegetables</li>
-                    <li>Meet Dalí</li>
-                    <li>Paint</li>
-                    <li>Read a book</li>
-                    <li>Play the cello</li>
-                    <li>Learn Chinese</li>
-                  </ul>
+
+                    <h2>You have <span class="incomplete__number">2</span> pending items</h2>
+                    <ul class="incomplete__tasks">
+                        <li><input type="checkbox"><label>Hit the gym</label><button class="delete"><i class="fas fa-trash-alt"></i></button></li>
+                        <!-- <li><input type="checkbox"><label>Buy vegetables</label><i class="fas fa-trash-alt"></i></li> 
+                        <li><input type="checkbox"><label>Meet Dalí</label><i class="fas fa-trash-alt"></i></li>
+                        <li><input type="checkbox"><label>Paint</label><i class="fas fa-trash-alt"></i></li> -->
+                    </ul>
+                    
+                    <h2>Completed tasks: <span class="completed__percent">50%</span></h2>
+                    <ul class="completed__tasks hide">
+                        <!-- <li><input type="checkbox"><label>Read a book</label><i class="fas fa-trash-alt"></i></li>
+                        <li><input type="checkbox"><label>Play the cello</label><i class="fas fa-trash-alt"></i></li>
+                        <li><input type="checkbox"><label>Learn Chinese</label><i class="fas fa-trash-alt"></i></li> -->
+                    </ul> 
                 </div>
-        </div>
+                <div class="chill">🎉<br><p></p>Time to chill. You have no to-dos.</div>
+            </div>
+            <div class="buttons__lower"></div>
+                <button class="button__show">Show Completed Tasks</button>
+                <button class="button__clear">Clear All Tasks</button>
+            </div>
         </div>
     </div>
     <script src="./todo.js"></script>
+    <script src="https://kit.fontawesome.com/eded75ef43.js" crossorigin="anonymous"></script>
 </body>
 </html>
