@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 body {
@@ -7,7 +6,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-sizing: border-box;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 300;
     height: 100vh;
@@ -20,6 +18,7 @@ h1 {
     color: white;
     font-size: 2.5rem;
     padding: 1rem 1rem 0 1rem;
+    text-align: center;
 }
 
 .todo__container, .list {
@@ -39,7 +38,7 @@ h1 {
     text-align: center;
 }
 
-.input__content, .button__add {
+.todo__input, .addTodo__button {
     border: solid 1px rgb(25, 215, 240);
     border-radius: 4px;
     box-sizing: border-box;
@@ -50,13 +49,13 @@ h1 {
     transition: border-color 0.15s;
 }
 
-.button__add, .button__show, .button__clear {
+.addTodo__button, .showHide__button, .clearAll__button {
     background-color: rgb(155, 203, 218);
     color: white;
     font-weight: 600;
 }
 
-.button__show, .button__clear {
+.showHide__button, .clearAll__button {
     border: solid 1px rgb(25, 215, 240);
     border-radius: 4px;
     box-sizing: border-box;
@@ -71,8 +70,8 @@ h1 {
 .input {
     flex-direction: row;
 }
-
-li {
+   
+.todo-item {
     background-color: rgb(155, 203, 218);
     border: solid 1px rgb(25, 215, 240);
     border-radius: 4px;
@@ -81,25 +80,16 @@ li {
     cursor: pointer;
     font-size: 1rem;
     line-height: 1.2rem;
-    list-style-type: none;
     margin: 0.6rem 0;
     padding: 0.5rem;
     position: relative;
     text-align: left;
-}
-
-.fade-in {
     animation: fadeIn ease-in 1s;
-};
+}
 
 @keyframes fadeIn {
     0% {opacity : 0};
     100% {opacity : 1}
-}
-    
-.ul {
-    margin: 0;
-    padding: 0;
 }
 
 .list {
@@ -131,7 +121,7 @@ input[type=checkbox] {
     transform: scale(1.2);
 }
 
-.delete {
+.delete__button {
     color: white;
     display: none;
     font-size: 1rem;
@@ -142,24 +132,38 @@ input[type=checkbox] {
     top: 0.35rem;
 }
 
-.delete:hover {
+.delete__button:hover {
     color: rgb(33, 96, 117);
     cursor: pointer;
 }
 
-.delete {
+.delete__button {
     background-color: rgb(155, 203, 218);
     border: 1px transparent;
     outline: none;
 }
 
-li:hover .delete {
-    display: block;
-}
-
-.button__show:hover, .button__clear:hover, .button__add:hover {
+.showHide__button:hover, .clearAll__button:hover, .addTodo__button:hover {
     background-color: rgb(33, 96, 117);
     cursor: pointer;
+}
+
+.todo-item:hover .delete__button {
+    display: block;
+    animation: fadeIn ease-in 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity : 0};
+    100% {opacity : 1}
+}
+
+.button__container, .list {
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 .hide {

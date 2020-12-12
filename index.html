@@ -7,48 +7,43 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="todo__container">
-        <div class="todo__content">
+    <div class="app__container">
 
-            <h1>Daily To-Do List Manager</h1>
-            
-            <div class="todo__form">
+    <h1>Daily To-Do List Manager</h1>
 
-                <div class="calendar">
+    <div class="todo__form">
+
+            <div class="calendar">
                 <div class="day"></div>
                 <div class="date"></div>
-                </div>
-
-                <form class="input">
-                <input class="input__content" type="text" value="" placeholder="Take the garbage out">
-                <button class="button__add" type="submit">+</button>
-                </form>
-
-                <div class="list">
-
-                    <h2>You have <span class="incomplete__number">2</span> pending items</h2>
-                    <ul class="incomplete__tasks">
-                        <li><input type="checkbox"><label>Hit the gym</label><button class="delete"><i class="fas fa-trash-alt"></i></button></li>
-                        <!-- <li><input type="checkbox"><label>Buy vegetables</label><i class="fas fa-trash-alt"></i></li> 
-                        <li><input type="checkbox"><label>Meet Dalí</label><i class="fas fa-trash-alt"></i></li>
-                        <li><input type="checkbox"><label>Paint</label><i class="fas fa-trash-alt"></i></li> -->
-                    </ul>
-                    
-                    <h2>Completed tasks: <span class="completed__percent">50%</span></h2>
-                    <ul class="completed__tasks hide">
-                        <!-- <li><input type="checkbox"><label>Read a book</label><i class="fas fa-trash-alt"></i></li>
-                        <li><input type="checkbox"><label>Play the cello</label><i class="fas fa-trash-alt"></i></li>
-                        <li><input type="checkbox"><label>Learn Chinese</label><i class="fas fa-trash-alt"></i></li> -->
-                    </ul> 
-                </div>
-                <div class="chill">🎉<br><p></p>Time to chill. You have no to-dos.</div>
             </div>
-            <div class="buttons__lower"></div>
-                <button class="button__show">Show Completed Tasks</button>
-                <button class="button__clear">Clear All Tasks</button>
+
+            <div class="input">
+                <input type="text" class="todo__input" placeholder="Take the garbage out">
+                <button class="addTodo__button">+</button>
             </div>
+
+        <div class="chill"></div>
+        
+        <div class="list">
+
+            <h2 class="counter__text">You have <span class="counter">0</span> pending items</h2>
+            <div class="container todo__container"></div>
+
+            <h2 class="completed__text">Completed tasks: <span class="completed__percent">50%</span></h2>
+            <div class="container completed__container hide"></div>
+
+        </div>
+
+        <div class="button__container">
+            <button class="controller showHide__button">Show Complete</button>
+            <button class="controller clearAll__button">Clear All</button>
+        </div>
+        
         </div>
     </div>
+</div>
+
     <script src="./todo.js"></script>
     <script src="https://kit.fontawesome.com/eded75ef43.js" crossorigin="anonymous"></script>
 </body>
