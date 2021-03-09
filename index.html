@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A to-do list app</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="app__container">
 
-    <h1>Daily To-Do List Manager</h1>
+        <h1>Daily To-Do List Manager</h1>
 
-    <div class="todo__form">
+        <div class="todo__form">
 
             <div class="calendar">
                 <div class="day"></div>
@@ -23,28 +25,29 @@
                 <button class="addTodo__button">+</button>
             </div>
 
-        <div class="chill"></div>
-        
-        <div class="list">
+            <div class="chill"></div>
 
-            <h2 class="counter__text">You have <span class="counter">0</span> pending items</h2>
-            <div class="container todo__container"></div>
+            <div class="list">
 
-            <h2 class="completed__text">Completed tasks: <span class="completed__percent">50%</span></h2>
-            <div class="container completed__container hide"></div>
+                <h2 class="counter__text">You have <span class="counter">0</span> pending items</h2>
+                <div class="container todo__container"></div>
 
-        </div>
+                <h2 class="completed__text">Completed tasks: <span class="completed__percent">50%</span></h2>
+                <div class="container completed__container hide"></div>
 
-        <div class="button__container">
-            <button class="controller showHide__button">Show Complete</button>
-            <button class="controller clearAll__button">Clear All</button>
-        </div>
-        
+            </div>
+
+            <div class="button__container">
+                <button class="controller showHide__button">Show Complete</button>
+                <button class="controller clearAll__button">Clear All</button>
+            </div>
+
         </div>
     </div>
-</div>
+    </div>
 
     <script src="./todo.js"></script>
     <script src="https://kit.fontawesome.com/eded75ef43.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
